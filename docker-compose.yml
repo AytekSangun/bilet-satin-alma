@@ -5,6 +5,6 @@ services:
     image: php:8.2-apache
     volumes:
       - ./:/var/www/html/
+      - ./config/vhosts.conf:/etc/apache2/sites-available/000-default.conf
     ports:
       - "8080:80"
-    working_dir: /var/www/html/public
